@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SectionContainer from '../components/SectionContainer'
 import {ThemeProvider} from "next-themes";
+import {Analytics} from "@vercel/analytics/dist/react";
 
 interface Props {
   children: ReactNode
@@ -39,6 +40,7 @@ export default function MainLayout({children}: Props) {
           </div>
         </SectionContainer>
       </main>
+      <Analytics />
     </ThemeProvider>
   )
 }
