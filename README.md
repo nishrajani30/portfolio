@@ -1,7 +1,7 @@
 # Nishtha Rajani's Portfolio Website
 
 [![Vercel](https://vercelbadge.vercel.app/api/nishrajani30/portfolio?style=flat-square)](https://vercelbadge.vercel.app/api/nishrajani30/portfolio?style=flat-square)
-[![GitHub license](https://img.shields.io/github/license/nishrajani30/portfolio?style=flat-square)](
+![GitHub license](https://img.shields.io/github/license/nishrajani30/portfolio?style=flat-square)
 
 This is the GitHub repository for my personal portfolio website, which showcases my skills, projects, and work
 experience. The website is hosted at https://www.nishtha-rajani.com/.
