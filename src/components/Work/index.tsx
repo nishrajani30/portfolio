@@ -6,7 +6,7 @@ import { WorkBackground } from './WorkBackground'
 import WorkContent from './WorkContent'
 import { workTiles } from './workTiles'
 
-export default () => (
+const Work = () => (
   <TileWrapper numOfPages={workTiles.length}>
     <TileBackground>
       <WorkBackground/>
@@ -20,3 +20,5 @@ export default () => (
     </TileContent>
   </TileWrapper>
 )
+
+export default Work;

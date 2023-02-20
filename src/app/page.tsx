@@ -7,12 +7,12 @@ import Works from "@/components/Work";
 import React from "react";
 
 
-export default () => (
+const Page = () => (
   <main className="bg-white dark:bg-black">
-
-          <Intro/>
-          <MoreInfo/>
-          <Works />
-
+    <Intro/>
+    <MoreInfo/>
+    <Works/>
   </main>
 )
+
+export default Page;

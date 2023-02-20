@@ -9,7 +9,7 @@ interface WrapperProps {
   numOfPages: number
 }
 
-export default ({children, numOfPages}: WrapperProps) => {
+const TileWrapper = ({children, numOfPages}: WrapperProps) => {
   const refContainer = useRef<HTMLDivElement>(null)
 
   const { scrollY } = useContext(ScrollContext)
@@ -41,3 +41,5 @@ export default ({children, numOfPages}: WrapperProps) => {
     </TileContext.Provider>
   )
 }
+
+export default TileWrapper;

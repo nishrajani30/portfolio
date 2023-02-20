@@ -3,7 +3,7 @@
 import {useContext, useRef} from 'react'
 import {ScrollContext} from './ScrollObserver'
 
-function opacityForBlock(sectionProgress: number, blockNumber: number) {
+const opacityForBlock = (sectionProgress: number, blockNumber: number) => {
   const progress = sectionProgress - blockNumber
 
   if (progress >= 0 && progress < 1) {
@@ -11,9 +11,9 @@ function opacityForBlock(sectionProgress: number, blockNumber: number) {
   }
 
   return 0.2
-}
+};
 
-export default () => {
+const MoreInfo = () => {
   const {scrollY} = useContext(ScrollContext)
   const refContainer = useRef<HTMLDivElement>(null)
 
@@ -61,3 +61,5 @@ export default () => {
     </div>
   )
 }
+
+export default MoreInfo;

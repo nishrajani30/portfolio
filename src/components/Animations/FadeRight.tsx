@@ -7,7 +7,7 @@ interface Props {
   delay?: number
 }
 
-export default ({children, duration, delay}: Props) => (
+const FadeRight = ({children, duration, delay}: Props) => (
   <motion.div
     initial={{x: -200, opacity: 0}}
     animate={{
@@ -23,3 +23,5 @@ export default ({children, duration, delay}: Props) => (
     {children}
   </motion.div>
 )
+
+export default FadeRight;

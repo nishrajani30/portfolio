@@ -4,4 +4,6 @@ interface TileBackgroundProps {
   children: ReactNode
 }
 
-export default ({children}: TileBackgroundProps) => <div className="absolute h-full w-full">{children}</div>
+const TileBackground = ({children}: TileBackgroundProps) => <div className="absolute h-full w-full">{children}</div>
+
+export default TileBackground;

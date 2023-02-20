@@ -1,21 +1,21 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import Link from 'next/link'
-import { ReactElement, useContext, useEffect, useRef } from 'react'
-import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
+import {ReactElement, useContext, useEffect, useRef} from 'react'
+import {HiOutlineArrowNarrowDown} from 'react-icons/hi'
 import FadeDown from '../components/Animations/FadeDown'
 import FadeRight from '../components/Animations/FadeRight'
 import FadeUp from '../components/Animations/FadeUp'
-import { renderCanvas } from './renderCanvas'
-import { ScrollContext } from './ScrollObserver'
+import {renderCanvas} from './renderCanvas'
+import {ScrollContext} from './ScrollObserver'
 
-export default (): ReactElement => {
+const Intro = (): ReactElement => {
   const ref = useRef<HTMLHeadingElement>(null)
-  const { scrollY } = useContext(ScrollContext)
+  const {scrollY} = useContext(ScrollContext)
 
   let progress = 0
-  const { current: elContainer } = ref
+  const {current: elContainer} = ref
 
   if (elContainer) {
     progress = Math.min(1, scrollY / elContainer.clientHeight)
@@ -28,14 +28,14 @@ export default (): ReactElement => {
   return (
     <div>
       <h1 className="sr-only">
-        Hello I'm Nistha Rajani, I'm a full-stack developer, and I love building things for the web.
+        Hello I&apos;m Nistha Rajani, I&apos;m a full-stack developer, and I love building things for the web.
       </h1>
       <motion.div
         className="relative z-10 flex h-[calc(100vh-81px)] items-center md:h-[calc(100vh-116px)]"
         animate={{
           transform: `translateY(${progress * 20}vh)`,
         }}
-        transition={{ type: 'spring', stiffness: 50 }}
+        transition={{type: 'spring', stiffness: 50}}
       >
         <AnimatePresence>
           <div className="mx-auto w-screen max-w-3xl px-4 sm:px-9 xl:max-w-5xl xl:px-0">
@@ -67,11 +67,11 @@ export default (): ReactElement => {
                   onClick={() => {
                     const intro = document.querySelector('#intro')
 
-                    intro?.scrollIntoView({ behavior: 'smooth' })
+                    intro?.scrollIntoView({behavior: 'smooth'})
                   }}
                 >
                   <FadeDown duration={1} delay={1.2}>
-                    <HiOutlineArrowNarrowDown size={20} />
+                    <HiOutlineArrowNarrowDown size={20}/>
                   </FadeDown>
                 </div>
               </div>
@@ -83,3 +83,5 @@ export default (): ReactElement => {
     </div>
   )
 }
+
+export default Intro;
