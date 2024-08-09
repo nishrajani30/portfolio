@@ -1,8 +1,7 @@
-import { Parent } from 'unist'
 import { visit } from 'unist-util-visit'
 
-export default () => (tree: Parent & { lang?: string }) =>
-  visit(tree, 'code', (node: Parent & { lang?: string }, index, parent: Parent) => {
+export default () => (tree: any & { lang?: string }) =>
+  visit(tree, 'code', (node: any & { lang?: string }, index, parent: any) => {
     const nodeLang = node.lang || ''
     let language = ''
     let title = ''
